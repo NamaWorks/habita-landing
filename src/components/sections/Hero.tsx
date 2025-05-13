@@ -1,13 +1,13 @@
-import { fontParSizeStyles, fontTitlesFamilyStyles, paddingSStyles } from "../../utils/styleClasses"
+import { fontParSizeStyles, fontTitlesFamilyStyles, gapSStyles, paddingSStyles } from "../../utils/styleClasses"
 import Button from "../ui/Button"
 
 const Hero = () => {
   return (
     <>
-      <section id="hero-section" className={`w-screen ${paddingSStyles} bg-[url(public/assets/raw/IMG/JPG/pexels-pnw-prod-9354539.jpg)] bg-cover bg-center`}>
+      <section id="hero-section" className={`w-screen ${paddingSStyles} bg-[url(public/assets/raw/IMG/JPG/pexels-pnw-prod-9354539.jpg)] bg-cover bg-center h-screen flex flex-col justify-between`}>
 
         <nav className="flex flex-row justify-between items-start">
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <Button data={{text:'what we do', color:'light'}} />
             <Button data={{text:'our process', color:'light'}} />
           </div>
@@ -16,20 +16,23 @@ const Hero = () => {
             <img src="../../../public/assets/opt/logo-favicon.png" alt="habita's logo"/>
           </div>
 
-          <div className="flex flex-col">
-            <Button data={{text:'our buils', color:'light'}} />
-            <Button data={{text:'vanlife blog', color:'light'}} />
+          <div className="flex flex-col items-end">
+            <Button data={{text:'our buils', color:'light', icon: false}} />
+            <Button data={{text:'vanlife blog', color:'light', icon: false}} />
           </div>
         </nav>
 
-        <div className="flex flex-col items-start w-[75%]">
+        <div className={`flex flex-col items-start w-[75%] mt-[5vh] ${gapSStyles}`}>
           <div className="flex flex-row w-[100%]">
-          <p className={`flex-1 ${fontParSizeStyles}`}>
-            At Habita, we transform ordinary vans into custom-built homes on wheels — ready to take you anywhere.
-            <br/>
-            Whether you're dreaming of weekend getaways or full-time vanlife, our conversions blend comfort, style, and functionality.
-          </p>
-          <ul className="flex-1 hidden">
+            <div className={`flex flex-col ${gapSStyles}`}>
+              <p className={`flex-1 ${fontParSizeStyles} text-(color:--color-white)`}>
+                At Habita, we transform ordinary vans into custom-built homes on wheels — ready to take you anywhere.
+              </p>
+              <p className={`flex-1 ${fontParSizeStyles} text-(color:--color-white) hidden`}>
+                Whether you're dreaming of weekend getaways or full-time vanlife, our conversions blend comfort, style, and functionality.
+              </p>
+            </div>
+          <ul className={`flex-1 hidden ${fontParSizeStyles} text-(color:--color-white)`}>
             <li>/ Tailored Designs</li>
             <li>/ handcrafted with care</li>
             <li>/ built for life on the road</li>
@@ -39,7 +42,7 @@ const Hero = () => {
           <Button data={{text: 'view the gallery', color:'light'}}/>
         </div>
 
-        <h1 className={`${fontTitlesFamilyStyles} text-[86px]/[80px] text-justify uppercase`}>
+        <h1 className={`${fontTitlesFamilyStyles} text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[15vh] mb-[10vh]`}>
           from idea —
           {/* <br/> */}
           to open road

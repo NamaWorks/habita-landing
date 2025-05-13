@@ -3,6 +3,8 @@
 
 :root {
   --font-family-main: 'Bricolage Grotesque';
+  --color-white: #FFF;
+  --color-dark: #0D1C10;
 }
 
 *{
