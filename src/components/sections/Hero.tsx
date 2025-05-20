@@ -1,10 +1,9 @@
-import { fontParSizeStyles, fontTitlesFamilyStyles, gapSStyles, paddingSStyles } from "../../utils/styleClasses"
 import Button from "../ui/Button"
 
 const Hero = () => {
   return (
     <>
-      <section id="hero-section" className={`w-screen ${paddingSStyles} bg-[url(public/assets/raw/IMG/JPG/pexels-pnw-prod-9354539.jpg)] bg-cover bg-center h-screen flex flex-col justify-between`}>
+      <section id="hero-section" className={`w-screen p-(--padding-xs) bg-[url(public/assets/raw/IMG/JPG/pexels-pnw-prod-9354539.jpg)] bg-cover bg-center min-h-screen flex flex-col justify-between`}>
 
         <nav className="flex flex-row justify-between items-start">
           <div className="flex flex-col items-start">
@@ -22,17 +21,17 @@ const Hero = () => {
           </div>
         </nav>
 
-        <div className={`flex flex-col items-start w-[75%] mt-[5vh] ${gapSStyles}`}>
+        <div className={`flex flex-col items-start w-[75%] mt-[5vh] gap-(--gap-xs)`}>
           <div className="flex flex-row w-[100%]">
-            <div className={`flex flex-col ${gapSStyles}`}>
-              <p className={`flex-1 ${fontParSizeStyles} text-(color:--color-white)`}>
+            <div className={`flex flex-col gap-(--gap-s)`}>
+              <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white)`}>
                 At Habita, we transform ordinary vans into custom-built homes on wheels — ready to take you anywhere.
               </p>
-              <p className={`flex-1 ${fontParSizeStyles} text-(color:--color-white) hidden`}>
+              <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white) hidden`}>
                 Whether you're dreaming of weekend getaways or full-time vanlife, our conversions blend comfort, style, and functionality.
               </p>
             </div>
-          <ul className={`flex-1 hidden ${fontParSizeStyles} text-(color:--color-white)`}>
+          <ul className={`flex-1 hidden text-(--font-parr-size) text-(color:--color-white)`}>
             <li>/ Tailored Designs</li>
             <li>/ handcrafted with care</li>
             <li>/ built for life on the road</li>
@@ -42,13 +41,15 @@ const Hero = () => {
           <Button data={{text: 'view the gallery', color:'light'}}/>
         </div>
 
-        <h1 className={`${fontTitlesFamilyStyles} text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[15vh] mb-[10vh]`}>
+        <h1 className={`font-(family-name:--font-family-main) text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[15vh] mb-[10vh]`}>
           from idea —
           {/* <br/> */}
           to open road
         </h1>
 
-        <Button data={{text: 'start your journey today', color: 'light'}}/>
+        <div>
+          <Button data={{text: 'start your journey today', color: 'light'}}/>
+        </div>
 
       </section>
     </>
