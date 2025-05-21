@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/sections/Footer'
 import Hero from './components/sections/Hero'
 import Inspiration from './components/sections/Inspiration'
 import Mission from './components/sections/Mission'
@@ -12,6 +13,7 @@ function App() {
       <Mission/>
       <Inspiration/>
       <Prefooter/>
+      <Footer/>
     </main>
     </>
   )
