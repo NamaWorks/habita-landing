@@ -3,7 +3,7 @@ import Button from "../ui/Button"
 const Hero = () => {
   return (
     <>
-      <section id="hero-section" className={`w-screen p-(--padding-xs) bg-[url(public/assets/raw/IMG/JPG/pexels-pnw-prod-9354539.jpg)] bg-cover bg-center min-h-screen flex flex-col justify-between`}>
+      <section id="hero-section" className={`w-screen p-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between`}>
 
         <nav className="flex flex-row justify-between items-start">
           <div className="flex flex-col items-start">
