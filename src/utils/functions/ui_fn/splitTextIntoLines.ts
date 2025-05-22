@@ -7,6 +7,7 @@ export const splitTextIntoLines = (element: HTMLElement) => {
 
   const tempSpan = document.createElement('span');
   element.classList.forEach((item)=>{tempSpan.classList.add(item)})
+
   document.body.appendChild(tempSpan)
 
   for (let i = 0; i < words.length; i++) {
@@ -16,7 +17,7 @@ export const splitTextIntoLines = (element: HTMLElement) => {
       lines.push(currentLine);
       currentLine = words[i];
     } else{
-      currentLine += (currentLine ? ' ' : '') + words[i]
+      currentLine += (currentLine ? '  ' : '') + words[i]
     }
   }
   
@@ -24,7 +25,10 @@ export const splitTextIntoLines = (element: HTMLElement) => {
     lines.push(currentLine);
   }
   
-  document.body.removeChild(tempSpan)
+  // document.body.removeChild(tempSpan)
 
-  element.innerHTML = lines.map((line)=>{return `<span>${line}</span>`}).join('<br>')
-}
+  element.innerHTML = lines.map((line,i)=>{return `<div style="overflow:hidden"><p style=${i % 2 === 0 ? 'text-align:right':'text-align:left'}>${line}</p></div>`}).join('');
+
+  const items = element.querySelectorAll('p');
+  items.forEach(items => items.style.transform = `translateY(-180px)`)
+};
