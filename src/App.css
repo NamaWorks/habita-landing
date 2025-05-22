@@ -1,7 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap'); */
 
 :root {
-  --font-family-main: 'Bricolage Grotesque';
+  --font-family-main: 'Bricolage Grotesque', sans-serif;
+  --font-family-secondary: 'Sen', sans-serif;
   --font-weight-btn: 400;
   --font-parr-size: 16px;
   --font-btn-size: 12px;
@@ -9,12 +10,12 @@
   --h1-size: 86px;
   --h1-line-h: 80px;
 
-
   --padding-xs: 8px;
   --padding-s: 16px;
   --gap-xs: 8px;
   --gap-s: 16px;
   --gap-m: 24px;
+  --gap-ml: 32px;
   
   --color-white: #FFF;
   --color-dark: #0D1C10;
@@ -25,4 +26,5 @@
   /* padding: 0; */
   box-sizing: border-box;
   overscroll-behavior-block: none;
+  overscroll-behavior-inline: none;
 }

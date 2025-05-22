@@ -11,7 +11,7 @@ const Button = ( {data}: ButtonInterface) => {
           </div>
         </>
       }
-      <p className={`font-[300] text-s`}>{data.text}</p>
+      <p className={`font-[400] text-s font-(family-name:--font-family-secondary)`}>{data.text}</p>
     </button>
   )
 }
