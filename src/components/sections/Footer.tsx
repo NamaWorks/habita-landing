@@ -8,13 +8,14 @@ const Footer = () => {
           <div>
             <Button data={{text: 'get in touch', color: 'light', icon: false}}/>
           </div>
-
-          <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-left uppercase text-(color:--color-white) font-[300]`}>
-            More than a build
-          </h2>
-          <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-right uppercase text-(color:--color-white) font-[300]`}>
-            It's your way of life
-          </h2>
+          <div>
+            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-left uppercase text-(color:--color-white) font-[300]`}>
+              More than a build
+            </h2>
+            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-right uppercase text-(color:--color-white) font-[300]`}>
+              It's your way of life
+            </h2>
+          </div>
 
           <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white)`}>
             Whether you're chasing weekend getaways or full-time freedom, we’re here to build the van that gets you there. Crafted with care, built for adventure — this is where the road becomes home.

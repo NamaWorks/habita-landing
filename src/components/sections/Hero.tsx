@@ -3,7 +3,7 @@ import Button from "../ui/Button"
 const Hero = () => {
   return (
     <>
-      <section id="hero-section" className={`w-screen p-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between`}>
+      <section id="hero-section" className={`w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen`}>
 
         <nav className="flex flex-row justify-between items-start">
           <div className="flex flex-col items-start">
@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-end">
-            <Button data={{text:'our buils', color:'light', icon: false}} />
+            <Button data={{text:'our builds', color:'light', icon: false}} />
             <Button data={{text:'vanlife blog', color:'light', icon: false}} />
           </div>
         </nav>
@@ -41,7 +41,7 @@ const Hero = () => {
           <Button data={{text: 'view the gallery', color:'light'}}/>
         </div>
 
-        <h1 className={`font-(family-name:--font-family-main) text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[15vh] mb-[10vh]`}>
+        <h1 className={`font-(family-name:--font-family-main) text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[10vh] mb-[6vh]`}>
           from idea —
           {/* <br/> */}
           to open road
