@@ -5,29 +5,48 @@ import { entryAnimationText } from "../../utils/functions/animations/entryAnimat
 
 const Hero = () => {
 
-  const offsetForHeaderAnimation:number = 150;
+  const offsetForHeaderAnimation:number = 100;
+
   const heroH1Ref = useRef<HTMLHeadingElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const gradientRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-
     if(heroH1Ref.current){
       splitTextIntoLines(heroH1Ref.current);
       heroH1Ref.current.style.opacity='1';
-      
-      const lines = heroH1Ref.current?.querySelectorAll('p');
-      lines?.forEach((element, i) => {
-        setTimeout(() => {
-          entryAnimationText(element)
-          }, i * offsetForHeaderAnimation);
-        });
-      
+      const lines = heroH1Ref.current.querySelectorAll('p');
+      setTimeout(() => {
+        lines?.forEach((element, i) => {
+          setTimeout(() => {
+            entryAnimationText(element)
+            }, i * offsetForHeaderAnimation);
+          });
+      }, 500);
+      };
+
+      if(sectionRef.current){
+        const buttons = sectionRef.current.querySelectorAll('button');
+        const texts = sectionRef.current.querySelectorAll('p');
+
+        if(gradientRef.current) {
+          gradientRef.current.style.top = `-${window.innerHeight}px`;
+          setTimeout(() => {
+            const revealGradient = document.querySelector('#reveal-gradient');
+            if(revealGradient){
+              revealGradient.remove();
+            }
+          }, 1000);
+        }
       };
       
   }, []);
 
   return (
     <>
-      <section id="hero-section" className={`w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen`}>
+    <div ref={gradientRef} id="reveal-gradient" className="h-[100svh] w-screen absolute bg-white top-[0px] duration-500 delay-500 ease-in"></div>
+
+      <section ref={sectionRef} id="hero-section" className={`w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen`}>
 
         <nav className="flex flex-row justify-between items-start">
           <div className="flex flex-col items-start">
@@ -77,6 +96,7 @@ const Hero = () => {
         </div>
 
       </section>
+        
     </>
   )
 }
