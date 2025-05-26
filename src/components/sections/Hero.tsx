@@ -26,8 +26,8 @@ const Hero = () => {
       };
 
       if(sectionRef.current){
-        const buttons = sectionRef.current.querySelectorAll('button');
-        const texts = sectionRef.current.querySelectorAll('p');
+        // const buttons = sectionRef.current.querySelectorAll('button');
+        // const texts = sectionRef.current.querySelectorAll('p');
 
         if(gradientRef.current) {
           gradientRef.current.style.top = `-${window.innerHeight}px`;
