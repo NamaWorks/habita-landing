@@ -5,6 +5,7 @@ import { animateWeightOnScroll } from "../../utils/functions/animations/animateW
 const Mission = () => {
 
   const h2MissionRef = useRef<HTMLHeadingElement>(null);
+  const firstImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(()=>{
     if(h2MissionRef.current){
@@ -13,11 +14,16 @@ const Mission = () => {
         animateWeightOnScroll(item as HTMLElement);
       });
     };
+
+    if(firstImageRef.current){
+      const img = firstImageRef.current.querySelectorAll('img');
+      console.log(img);
+    };
   },[])
 
   return (
     <section className={`flex flex-col items-center p-(--padding-m)`}>
-      <div className={`${missionImagesStyles}`}>
+      <div className={`${missionImagesStyles}`} ref={firstImageRef}>
         <img src="./../../../public/assets/raw/IMG/GIF/Habita-Gif-Text-01.gif" alt="GIF with several images of camper vans" />
       </div>
 

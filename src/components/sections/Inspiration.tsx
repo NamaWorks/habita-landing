@@ -1,6 +1,17 @@
+import { useEffect, useRef } from "react";
 import Button from "../ui/Button";
+import { splitTextIntoCharacters } from "../../utils/functions/ui_fn/splitTextIntoCharacters";
 
 const Inspiration = () => {
+
+  const hlTextRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if(hlTextRef.current){
+      splitTextIntoCharacters(hlTextRef.current);
+    }
+  },[]);
+
   return (
     <>
     <section className="flex flex-col gap-(--gap-m) p-(--padding-s)">
@@ -14,7 +25,7 @@ const Inspiration = () => {
         <Button data={{text: 'get inspired for your own', color: 'dark', icon: false}}/>
       </div>
 
-      <p className="uppercase font-[400]">Tips, stories, and <span className="font-[800]">life on the road</span></p>
+      <p ref={hlTextRef} className="uppercase font-[400]">Tips, stories, and <span className="font-[800]">life on the road</span></p>
 
       <p className={`flex-1 text-(--font-parr-size) text-(color:--color-dark)`}>
         Looking for ideas, advice, or just some vanlife fuel? Our blog is packed with content from the road — gear reviews, build insights, travel tips, and more.

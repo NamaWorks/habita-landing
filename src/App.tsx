@@ -9,7 +9,7 @@ import Prefooter from './components/sections/Prefooter'
 function App() {
   return (
     <>
-    <main className='flex flex-col bg-[#FBFBFB]'>
+    <main className='flex flex-col bg-(--color-white)'>
       <Hero/>
       <Mission/>
       <Inspiration/>
