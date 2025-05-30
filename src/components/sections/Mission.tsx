@@ -15,10 +15,9 @@ const Mission = () => {
       });
     };
 
-    if(firstImageRef.current){
-      const img = firstImageRef.current.querySelectorAll('img');
-      console.log(img);
-    };
+    // if(firstImageRef.current){
+      // const img = firstImageRef.current.querySelectorAll('img');
+    // };
   },[])
 
   return (
