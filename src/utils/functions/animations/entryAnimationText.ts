@@ -35,5 +35,4 @@ export const entryAnimationText = (htmlElement: HTMLElement, onPageLoad:boolean=
       }
     });
   };
-
 };
