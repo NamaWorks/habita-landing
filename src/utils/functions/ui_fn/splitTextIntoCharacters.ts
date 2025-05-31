@@ -11,4 +11,6 @@ export const splitTextIntoCharacters = (element: HTMLElement) => {
   }).join('');
 
   element.innerHTML = newText;
+  // element.style.display = 'flex';
+  // element.style.flexWrap ='wrap';
 };

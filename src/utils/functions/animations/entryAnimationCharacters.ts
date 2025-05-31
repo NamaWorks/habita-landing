@@ -3,9 +3,14 @@ import { splitTextIntoCharacters } from "../ui_fn/splitTextIntoCharacters";
 
 export const entryAniamationCharacters = (element:HTMLElement):void => {
 
+  const originalText = new String(element.innerText).toString();
+  console.log(originalText)
+
   window.addEventListener('scroll', () => {
+
   if(!element.classList.contains('visible')){
       splitTextIntoCharacters(element);
+
       const charContainers:NodeListOf<HTMLSpanElement> = element.querySelectorAll('.char-container');
       const charElements:NodeListOf<HTMLSpanElement> = element.querySelectorAll('.char');
     
@@ -35,6 +40,5 @@ export const entryAniamationCharacters = (element:HTMLElement):void => {
       }
     };
   });
-  
 
 }; 

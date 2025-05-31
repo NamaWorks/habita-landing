@@ -1,4 +1,4 @@
-export const splitTextIntoLines = (element: HTMLElement) => {
+export const splitTextIntoLines = (element: HTMLElement, alignMod:boolean=true) => {
   const containerWidth = element.parentElement?.offsetWidth ? element?.parentElement?.offsetWidth - 20 : console.log('error');
   const text = element.innerText;
   const words = text.split(' ');
@@ -27,7 +27,7 @@ export const splitTextIntoLines = (element: HTMLElement) => {
   
   document.body.removeChild(tempSpan)
 
-  element.innerHTML = lines.map((line,i)=>{return `<div style="overflow:hidden"><p style=${i % 2 === 0 ? 'text-align:right':'text-align:left'}>${line}</p></div>`}).join('');
+  element.innerHTML = lines.map((line,i)=>{return `<div style="overflow:hidden"><p style=${alignMod ? (i % 2 === 0 ? 'text-align:right':'text-align:left') : (console.log('test'))}>${line}</p></div>`}).join('');
 
   const items = element.querySelectorAll('p');
   items.forEach(items => items.style.transform = `translateY(-180px)`)

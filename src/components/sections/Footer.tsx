@@ -1,6 +1,42 @@
+import { useEffect, useRef } from "react"
 import Button from "../ui/Button"
+import { splitTextIntoLines } from "../../utils/functions/ui_fn/splitTextIntoLines";
+import { entryAnimationText } from "../../utils/functions/animations/entryAnimationText";
+import { getPercentageOfWindowPos } from "../../utils/functions/ui_fn/getPercentageOfWindowPos";
 
 const Footer = () => {
+
+  const offsetForHeaderAnimation:number = 100;
+
+  const prefooterh2FirstRef = useRef<HTMLHeadingElement>(null);
+  const prefooterh2SecondRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(()=>{
+    if(prefooterh2FirstRef.current && prefooterh2SecondRef.current){
+        splitTextIntoLines(prefooterh2FirstRef.current, false);
+        prefooterh2FirstRef.current.style.opacity='1';
+        const linesA = prefooterh2FirstRef.current.querySelectorAll('p');
+        setTimeout(() => {
+          linesA?.forEach((element, i) => {
+            setTimeout(() => {
+              entryAnimationText(element)
+              }, i * offsetForHeaderAnimation);
+            });
+        }, 500);
+
+        splitTextIntoLines(prefooterh2SecondRef.current, false);
+        prefooterh2SecondRef.current.style.opacity='1';
+        const linesB = prefooterh2SecondRef.current.querySelectorAll('p');
+        setTimeout(() => {
+          linesB?.forEach((element, i) => {
+            setTimeout(() => {
+              entryAnimationText(element)
+              }, i * offsetForHeaderAnimation);
+            });
+        }, 500);
+    }
+  },[])
+
   return (
     <>
       <footer className={`bg-[url(public/assets/raw/IMG/JPG/luke-porter-dVHLuOe1Nwk-unsplash.jpg)] w-screen h-[100svh] bg-cover bg-center min-h-screen flex flex-col justify-between px-(--padding-xs) pb-(--padding-xs)`}>
@@ -9,10 +45,10 @@ const Footer = () => {
             <Button data={{text: 'get in touch', color: 'light', icon: false}}/>
           </div>
           <div>
-            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-left uppercase text-(color:--color-white) font-[300]`}>
+            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-left uppercase text-(color:--color-white) font-[300] opacity-0`} ref={prefooterh2FirstRef}>
               More than a build
             </h2>
-            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-right uppercase text-(color:--color-white) font-[300]`}>
+            <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-right uppercase text-(color:--color-white) font-[300] opacity-0`} ref={prefooterh2SecondRef}>
               It's your way of life
             </h2>
           </div>
