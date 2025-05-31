@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react"
 import Button from "../ui/Button"
 import { splitTextIntoLines } from "../../utils/functions/ui_fn/splitTextIntoLines";
 import { entryAnimationText } from "../../utils/functions/animations/entryAnimationText";
-import { getPercentageOfWindowPos } from "../../utils/functions/ui_fn/getPercentageOfWindowPos";
 
 const Footer = () => {
 
@@ -19,7 +18,7 @@ const Footer = () => {
         setTimeout(() => {
           linesA?.forEach((element, i) => {
             setTimeout(() => {
-              entryAnimationText(element)
+              entryAnimationText(element, false)
               }, i * offsetForHeaderAnimation);
             });
         }, 500);
@@ -30,7 +29,7 @@ const Footer = () => {
         setTimeout(() => {
           linesB?.forEach((element, i) => {
             setTimeout(() => {
-              entryAnimationText(element)
+              entryAnimationText(element, false)
               }, i * offsetForHeaderAnimation);
             });
         }, 500);

@@ -1,5 +1,7 @@
-export const entryAnimationText = (htmlElement: HTMLElement) => {
-    let moveAmount = 180;
+import { getPercentageOfWindowPos } from "../ui_fn/getPercentageOfWindowPos";
+
+export const entryAnimationText = (htmlElement: HTMLElement, onPageLoad:boolean=true) => {
+  let moveAmount = 180;
   // let opacityAnimated = 1;
   let timeoutA: number | null;
 
@@ -21,5 +23,17 @@ export const entryAnimationText = (htmlElement: HTMLElement) => {
     }
   };
 
-  move();
+  if(onPageLoad){
+    move();
+  } else {
+    window.addEventListener('scroll', ()=>{
+    
+      const scrollPosition = getPercentageOfWindowPos(htmlElement);
+      
+      if(scrollPosition>0 && scrollPosition<70){
+        move();
+      }
+    });
+  };
+
 };
