@@ -44,12 +44,12 @@ const Hero = () => {
 
   return (
     <>
-    <div ref={gradientRef} id="reveal-gradient" className="h-[100svh] w-screen absolute bg-white top-[0px] duration-500 delay-500 ease-in"></div>
+    <div ref={gradientRef} id="reveal-gradient" className="h-[100svh] w-screen absolute bg-white top-[0px] duration-500 delay-500 ease-in z-99"></div>
 
       <section ref={sectionRef} id="hero-section" className={`w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen`}>
 
         <nav className="flex flex-row justify-between items-start">
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start max-w-[45%]">
             <Button data={{text:'what we do', color:'light'}} />
             <Button data={{text:'our process', color:'light'}} />
           </div>
@@ -58,7 +58,7 @@ const Hero = () => {
             <img src="../../../public/assets/opt/logo-favicon.png" alt="habita's logo"/>
           </div>
 
-          <div className="flex flex-col items-end" style={{}}>
+          <div className="flex flex-col items-end max-w-[45%]">
             <Button data={{text:'our builds', color:'light', icon: false}} />
             <Button data={{text:'vanlife blog', color:'light', icon: false}} />
           </div>

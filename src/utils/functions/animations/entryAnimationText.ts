@@ -30,7 +30,7 @@ export const entryAnimationText = (htmlElement: HTMLElement, onPageLoad:boolean=
     
       const scrollPosition = getPercentageOfWindowPos(htmlElement);
       
-      if(scrollPosition>0 && scrollPosition<70){
+      if(scrollPosition>=0 && scrollPosition<75){
         move();
       }
     });
