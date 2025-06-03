@@ -44,9 +44,12 @@ const Hero = () => {
 
   return (
     <>
-    <div ref={gradientRef} id="reveal-gradient" className="h-[100svh] w-screen absolute bg-white top-[0px] duration-500 delay-500 ease-in z-99"></div>
+    <div ref={gradientRef} id="reveal-gradient" className="h-[100svh] w-screen fixed bg-white top-[0px] duration-500 delay-500 ease-in z-99"></div>
 
-      <section ref={sectionRef} id="hero-section" className={`w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen`}>
+      <section ref={sectionRef} id="hero-section" className={`
+          w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen
+          md:px-(--padding-s) md:pt-(--padding-s) 
+        `}>
 
         <nav className="flex flex-row justify-between items-start">
           <div className="flex flex-col items-start max-w-[45%]">
@@ -64,17 +67,29 @@ const Hero = () => {
           </div>
         </nav>
 
-        <div className={`flex flex-col items-start w-[75%] mt-[5vh] gap-(--gap-xs)`}>
-          <div className="flex flex-row w-[100%]">
+        <div className={`
+            flex flex-col items-start w-[75%] mt-[5vh] gap-(--gap-s)
+            md:w-[50%]
+          `}>
+          <div className="
+            flex flex-row w-[100%]
+            md:gap-(--gap-l) md:min-w-[728px]
+          ">
             <div className={`flex flex-col gap-(--gap-s)`}>
-              <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white)`}>
+              <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white) max-w-[300px]`}>
                 At Habita, we transform ordinary vans into custom-built homes on wheels — ready to take you anywhere.
               </p>
-              <p className={`flex-1 text-(--font-parr-size) text-(color:--color-white) hidden`}>
+              <p className={`
+                flex-1 text-(--font-parr-size) text-(color:--color-white) hidden max-w-[300px]
+                md:flex 
+                `}>
                 Whether you're dreaming of weekend getaways or full-time vanlife, our conversions blend comfort, style, and functionality.
               </p>
             </div>
-          <ul className={`flex-1 hidden text-(--font-parr-size) text-(color:--color-white)`}>
+          <ul className={`
+            flex-1 hidden text-(--font-parr-size) text-(color:--color-white)
+            md:flex md:flex-col md:w-full
+          `}>
             <li>/ Tailored Designs</li>
             <li>/ handcrafted with care</li>
             <li>/ built for life on the road</li>
@@ -86,9 +101,11 @@ const Hero = () => {
 
         <h1 
           ref={heroH1Ref}
-          className={`font-(family-name:--font-family-main) text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[10vh] mb-[6vh] opacity-0`}
+          className={`font-(family-name:--font-family-main) text-[86px]/[80px] text-justify uppercase text-(color:--color-white) mt-[10vh] mb-[6vh] opacity-0 md:text-[170px]/[160px] md:mt-[5vh]`}
           >
-            from idea — to  open  road
+            from idea — 
+            <br/>
+            to  open  road
         </h1>
 
         <div>

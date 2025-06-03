@@ -14,10 +14,14 @@
   --padding-s: 16px;
   --padding-sm: 24px;
   --padding-m: 32px;
+  --padding-ml: 64px;
+  --padding-l: 128px;
   --gap-xs: 8px;
   --gap-s: 16px;
   --gap-m: 24px;
   --gap-ml: 32px;
+  --gap-l: 128px;
+  --gap-xl: 256px;
   
   --color-white: #FBFBFB;
   --color-dark: #0D1C10;

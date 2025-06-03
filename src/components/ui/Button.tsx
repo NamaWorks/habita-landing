@@ -48,8 +48,9 @@ const Button = ( {data}: ButtonInterface) => {
     <button className={`
       ${data.color === 'light' ? 'bg-(--color-white)' : 'bg-(--color-dark)'} 
       ${data.icon === true ? 'px-[4px] py-[0]' : 'px-[4px] py-[0]'} 
-      rounded-[5px] uppercase font-(--font-weight-btn) flex flex-row
-      ${data.color === 'light' ? 'text-(--color-dark)' : 'text-(--color-white)'}`
+      rounded-[5px] uppercase font-(--font-weight-btn) flex flex-row cursor-pointer
+      ${data.color === 'light' ? 'text-(--color-dark)' : 'text-(--color-white)'}
+      `
       } onMouseOver={()=>{handleButtonHover(true)}} onMouseLeave={()=>{handleButtonHover(false)}}>
         <div className="flex relative overflow-hidden max-w-[30px]">
           (
