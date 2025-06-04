@@ -44,7 +44,7 @@ const Mission = () => {
     return (
       <section className={`flex flex-col items-center py-(--padding-ml) px-(--padding-m)`}>  
         <div>
-          <h2 className={`font-(family-name:--font-family-main) text-[48px]/[40px] text-center uppercase text-(color:--color-dark) font-[300]`} ref={h2MissionRef}>
+          <h2 className={`font-(family-name:--font-family-main) text-[96px]/[80px] text-center uppercase text-(color:--color-dark) font-[300]`} ref={h2MissionRef}>
             we &nbsp;
             <span className="var-weight">transform &nbsp;</span>
             ordinary vans into &nbsp;

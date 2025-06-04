@@ -16,6 +16,7 @@
   --padding-m: 32px;
   --padding-ml: 64px;
   --padding-l: 128px;
+  --padding-xl: 256px;
   --gap-xs: 8px;
   --gap-s: 16px;
   --gap-m: 24px;
@@ -33,4 +34,9 @@
   box-sizing: border-box;
   overscroll-behavior-block: none;
   overscroll-behavior-inline: none;
+  scroll-behavior: smooth;
+}
+
+body{
+  scroll-behavior: smooth;
 }
