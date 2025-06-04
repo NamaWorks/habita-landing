@@ -54,7 +54,7 @@ const Hero = () => {
         ref={sectionRef}
         id="hero-section"
         className={`
-          relative w-screen px-(--padding-xs) pt-(--padding-xs) bg-[url(public/assets/opt/pexels-pnw-prod-9354548.png)] bg-cover bg-center min-h-screen flex flex-col justify-between h-screen
+          relative w-screen px-(--padding-xs) pt-(--padding-xs) bg-cover bg-center min-h-screen flex flex-col justify-between h-screen
           md:px-(--padding-s) md:pt-(--padding-s) 
         `}
       >
@@ -67,7 +67,7 @@ const Hero = () => {
           style={{ pointerEvents: "none" }}
         >
           <source
-            src="/assets/opt/video/12335026-uhd_2560_1440_48fps.mp4"
+            src="https://moona.dev/wp-content/uploads/2025/06/12335026-uhd_2560_1440_48fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.

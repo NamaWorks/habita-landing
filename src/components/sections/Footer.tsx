@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className={`relative bg-[url(public/assets/raw/IMG/JPG/luke-porter-dVHLuOe1Nwk-unsplash.jpg)] w-screen h-[100svh] bg-cover bg-center min-h-screen flex flex-col justify-between px-(--padding-xs) pb-(--padding-xs)`}
+        className={`relative w-screen h-[100svh] bg-cover bg-center min-h-screen flex flex-col justify-between px-(--padding-xs) pb-(--padding-xs)`}
       >
         <div className="absolute top-0 left-0 h-full w-full z-1 bg-black opacity-45"></div>
         <video
@@ -51,7 +51,7 @@ const Footer = () => {
           style={{ pointerEvents: "none" }}
         >
           <source
-            src="/public/assets/opt/video/9354291-hd_1920_1080_30fps.mp4"
+            src="https://moona.dev/wp-content/uploads/2025/06/9354291-hd_1920_1080_30fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
