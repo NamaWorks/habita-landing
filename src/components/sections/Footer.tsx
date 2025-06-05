@@ -129,7 +129,7 @@ const Footer = () => {
             </div>
             <div className={`flex flex-col  justify-end`}>
               <img
-                src="./../../../public/assets/raw/IMG/SVG/Habita-logo-white.svg"
+                src="https://moona.dev/wp-content/uploads/2025/06/logo-white.png"
                 alt="habita logo white"
               />
             </div>
