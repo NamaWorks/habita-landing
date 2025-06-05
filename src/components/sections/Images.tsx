@@ -55,7 +55,7 @@ const Images = () => {
 
           <div className="relative w-full top-[50px]">
             <div className="relative top-[45px] z-10">
-              <img src="/public/assets/opt/logo-black.svg" alt="logo black" />
+              <img src="https://moona.dev/wp-content/uploads/2025/06/logo-black.png" alt="logo black" />
             </div>
             <div className=" flex overflow-hidden rounded-[5px] flex object-cover h-full">
               {/* <img src="/public/assets/raw/IMG/JPG/pexels-pnw-prod-9354908.jpg" alt="" /> */}

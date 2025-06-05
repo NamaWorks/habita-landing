@@ -39,8 +39,9 @@ const Button = ( {data}: ButtonInterface) => {
   }, [buttonHovered, jsonData]);
 
   useEffect(() => {
-    fetch('assets/opt/lotties/01_Habita_Arrow-btn.json')
-      .then(res => res.json())
+    // fetch('assets/opt/lotties/01_Habita_Arrow-btn.json')
+    fetch('https://raw.githubusercontent.com/NamaWorks/habita-landing/refs/heads/main/public/assets/opt/lotties/01_Habita_Arrow-btn.json')
+    .then(res => res.json())
       .then((data) => setJsonData(data));
   }, []);
 

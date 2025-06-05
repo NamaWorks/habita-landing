@@ -67,7 +67,7 @@ const Hero = () => {
           style={{ pointerEvents: "none" }}
         >
           <source
-            src="https://moona.dev/wp-content/uploads/2025/06/12335026-uhd_2560_1440_48fps.mp4"
+            src="https://moona.dev/wp-content/uploads/2025/06/12335026-Uhd-2560-1440-48Fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -82,7 +82,7 @@ const Hero = () => {
 
             <div>
               <img
-                src="../../../public/assets/opt/logo-favicon.png"
+                src="https://moona.dev/wp-content/uploads/2025/06/logo-favicon.png"
                 alt="habita's logo"
               />
             </div>
