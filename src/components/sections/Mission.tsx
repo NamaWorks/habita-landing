@@ -53,7 +53,7 @@ const Mission = () => {
                 custom-built &nbsp;
                 <span className="flex w-[15%]">
                   <div className={`${missionImagesStyles}`} ref={firstImageRef}>
-                    <img src="./../../../public/assets/raw/IMG/GIF/Habita-Gif-Text-01.gif" alt="GIF with several images of camper vans" className="md:w-full md:h-full md:object-cover"/>
+                    <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-Gif-Text-01.gif" alt="GIF with several images of camper vans" className="md:w-full md:h-full md:object-cover"/>
                   </div>
                 </span> 
               </span>
@@ -63,7 +63,7 @@ const Mission = () => {
             <span className="flex flex-nowrap justify-center">
               <span className="flex w-[15%]">
                 <div className={`${missionImagesStyles}`}>
-                  <img src="./../../../public/assets/raw/IMG/GIF/Habita-Gif-Text-02.gif" alt="GIF with several images of camper vans" className="md:w-full md:h-full md:object-cover"/>
+                  <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-Gif-Text-02.gif" alt="GIF with several images of camper vans" className="md:w-full md:h-full md:object-cover"/>
                 </div>
               </span>
             &nbsp;to take you anywhere
