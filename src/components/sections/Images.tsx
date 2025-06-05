@@ -16,7 +16,7 @@ const Images = () => {
               <img src="https://moona.dev/wp-content/uploads/2025/06/pexels-pnw-prod-9354539.jpg" alt="image of a man in the van"/>
             </div>
             <div className="absolute top-0 w-full">
-              <img src="/public/assets/raw/IMG/SVG/Habita-favicon-mask-white.svg" alt="image mask" className="w-full scale-101"/>
+              <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-favicon-mask-white@2x.png" alt="image mask" className="w-full scale-101"/>
             </div>
           </div>
   
@@ -25,7 +25,7 @@ const Images = () => {
               <img src="https://moona.dev/wp-content/uploads/2025/06/pexels-kampus-7476252.jpg" alt="image of a man in the van"/>
             </div>
             <div className="absolute top-[75%] w-full">
-              <img src="/public/assets/raw/IMG/SVG/Habita-favicon-mask-white.svg" alt="image mask" className="w-full scale-101"/>
+              <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-favicon-mask-white@2x.png" alt="image mask" className="w-full scale-101"/>
             </div>
           </div>
         </section>
@@ -46,7 +46,7 @@ const Images = () => {
             </div>
             <div className="absolute top-[75%] w-full">
               <img
-                src="/public/assets/raw/IMG/SVG/Habita-favicon-mask-white.svg"
+                src="https://moona.dev/wp-content/uploads/2025/06/Habita-favicon-mask-white@2x.png"
                 alt="image mask"
                 className="w-full scale-101"
               />
@@ -85,7 +85,7 @@ const Images = () => {
             </div>
             <div className="absolute top-0 w-full">
               <img
-                src="/public/assets/raw/IMG/SVG/Habita-favicon-mask-white.svg"
+                src="https://moona.dev/wp-content/uploads/2025/06/Habita-favicon-mask-white@2x.png"
                 alt="image mask"
                 className="w-full scale-101"
               />

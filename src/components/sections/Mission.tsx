@@ -26,7 +26,7 @@ const Mission = () => {
     return (
       <section className={`flex flex-col items-center p-(--padding-m)`}>
         <div className={`${missionImagesStyles}`} ref={firstImageRef}>
-          <img src="./../../../public/assets/raw/IMG/GIF/Habita-Gif-Text-01.gif" alt="GIF with several images of camper vans" />
+          <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-Gif-Text-01.gif" alt="GIF with several images of camper vans" />
         </div>
   
         <div>
@@ -36,7 +36,7 @@ const Mission = () => {
         </div>
   
         <div className={`${missionImagesStyles}`}>
-          <img src="./../../../public/assets/raw/IMG/GIF/Habita-Gif-Text-02.gif" alt="GIF with several images of camper vans" />
+          <img src="https://moona.dev/wp-content/uploads/2025/06/Habita-Gif-Text-02.gif" alt="GIF with several images of camper vans" />
         </div>
       </section>
     );
